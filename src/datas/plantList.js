@@ -2,55 +2,49 @@ export const plantList = [
 	{
 		name: 'monstera',
 		category: 'classic',
-		id: '1ed',
-        isBestSale:true
+		id: '1ed'
 	},
 	{
 		name: 'ficus lyrata',
 		category: 'classic',
-		id: '2ab',
-        isBestSale:false
+		id: '2ab'
 	},
 	{
 		name: 'silver pothos',
 		category: 'classic',
 		id: '3sd',
-        isBestSale:true
+		isSpecialOffer: true
 	},
 	{
 		name: 'yucca',
 		category: 'classic',
-		id: '4kk',
-        isBestSale:false
+		id: '4kk'
 	},
 	{
 		name: 'olive tree',
 		category: 'exterior',
-		id: '5pl',
-        isBestSale:true
+		id: '5pl'
 	},
 	{
 		name: 'geranium',
 		category: 'exterior',
-		id: '6uo',
-        isBestSale:false
+		id: '6uo'
 	},
 	{
 		name: 'basil',
 		category: 'exterior',
 		id: '7ie',
-        isBestSale:true
+		isSpecialOffer: true
 	},
 	{
 		name: 'aloe',
 		category: 'succulent',
 		id: '8fp',
-        isBestSale:true
+		isSpecialOffer: true
 	},
 	{
 		name: 'succulent',
 		category: 'succulent',
-		id: '9vn',
-        isBestSale:false
+		id: '9vn'
 	}
 ]
