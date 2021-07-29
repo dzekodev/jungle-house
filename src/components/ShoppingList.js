@@ -1,28 +1,34 @@
-import React from 'react';
-import {plantList} from '../datas/plantList'
+import { plantList } from '../datas/plantList'
+import PlantItem from './PlantItem'
 import '../styles/ShoppingList.css'
-function ShoppingList(){
-    const category = plantList.reduce(
-        (acc,plant)=>
-        acc.includes(plant.category)?acc:acc.concat(plant.category),[]
-    );
-    return(
-        <React.Fragment>
-            <ul>
-                {category.map(cat=>(
-                    <li >{cat}</li>
-                ))}
-            </ul>
-            <ul className="jh-plant-list">
-                {plantList.map((plant)=>(
-                    <li className= "jh-plant-item"
-                        key={plant.id}>
-                        {plant.name} 
-                        {plant.isSpecialOffer ? <div className="jh-sales">Sale</div> : null}
-                    </li>
-                ))}
-            </ul>
-        </React.Fragment>
-    );
+
+function ShoppingList() {
+	const categories = plantList.reduce(
+		(acc, plant) =>
+			acc.includes(plant.category) ? acc : acc.concat(plant.category),
+		[]
+	)
+
+	return (
+		<div>
+			<ul>
+				{categories.map((cat) => (
+					<li key={cat}>{cat}</li>
+				))}
+			</ul>
+			<ul className='jh-plant-list'>
+				{plantList.map(({ id, cover, name, water, light }) => (
+					<PlantItem
+						id={id}
+						cover={cover}
+						name={name}
+						water={water}
+						light={light}
+					/>
+				))}
+			</ul>
+		</div>
+	)
 }
+
 export default ShoppingList
