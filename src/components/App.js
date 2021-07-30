@@ -1,15 +1,19 @@
-import React from 'react';
-import '../styles/App.css';
-import Banner from './Banner';
-import Cart from './Cart';
+import Banner from './Banner'
+import logo from '../assets/logo.png'
+// import Cart from './Cart'
 import ShoppingList from './ShoppingList'
+
 function App() {
-  return (
-    <React.Fragment>
-      <Banner/>
-      <Cart/>
-      <ShoppingList/>
-    </React.Fragment>
-  );
+	return (
+		<div>
+			<Banner>
+				<img src={logo} alt='Jungle House' className='jh-logo' />
+				<h1 className='jh-title'>Jungle House</h1>
+			</Banner>
+			{/* <Cart /> */}
+			<ShoppingList />
+		</div>
+	)
 }
-export default App;
+
+export default App

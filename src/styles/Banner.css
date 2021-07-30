@@ -1,15 +1,11 @@
-.lmj-banner{
-	display: flex;
-	flex-direction: column;
+.jh-banner {
 	color: black;
 	text-align: right;
 	padding: 32px;
 	border-bottom: solid 3px black;
-	align-items: center;
-}
-.lmj-banner-row {
 	display: flex;
 	justify-content: flex-end;
+	flex-direction: row;
 	align-items: center;
 }
 
@@ -20,9 +16,4 @@
 .jh-logo {
 	height: 45px;
 	width: 45px;
-	position: relative;
-	left: 20px;
-}
-.springClass{
-	font-size: 20px;
 }
