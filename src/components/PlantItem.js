@@ -1,12 +1,12 @@
 import CareScale from './CareScale'
 import '../styles/PlantItem.css'
-
+function handleClick(plantName) {
+	alert(`You want to buy 1 ${plantName}? Great choice 🌱✨`)
+}
 function PlantItem({ id, cover, name, water, light }) {
-	function handleClick(e) {
-        console.log("this is my event : ", e);
-    }
+	
 	return (
-		<li key={id} className='jh-plant-item' onClick={handleClick}>
+		<li key={id} className='jh-plant-item' onChange={()=>handleClick}>
 			<img className='jh-plant-item-cover' src={cover} alt={{name}} />
 			{name}
 			<div>
