@@ -19,7 +19,7 @@ function Footer() {
 			<div className='jh-footer-elem'>
 			For plant enthusiasts 🌿🌱🌵
 			</div>
-			<div className='jh-footer-elem'>Subscribe to our newsletter :</div>
+			<div className='jh-footer-elem'>Leave us your email :</div>
 			<input
 				placeholder='Enter your email'
 				onChange={handleInput}

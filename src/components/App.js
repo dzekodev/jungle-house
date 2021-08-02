@@ -1,24 +1,24 @@
+import { useState } from 'react'
 import Banner from './Banner'
 import logo from '../assets/logo.png'
-// import Cart from './Cart'
-import ShoppingList from './ShoppingList'
-import QuestionForm from './QuestionForm'
+import Cart from './Cart'
 import Footer from './Footer'
+import ShoppingList from './ShoppingList'
+import '../styles/App.css'
 
 function App() {
-  function handleSubmit(e){
-    e.preventDefault()
-    alert(e.target['my_input'].value)
-  }
+	const [cart, updateCart] = useState([])
 	return (
 		<div>
 			<Banner>
 				<img src={logo} alt='Jungle House' className='jh-logo' />
 				<h1 className='jh-title'>Jungle House</h1>
 			</Banner>
-			{/* <Cart /> */}
-			<ShoppingList />
-			<Footer/>
+			<div className='jh-layout-inner'>
+				<Cart cart={cart} updateCart={updateCart} />
+				<ShoppingList cart={cart} updateCart={updateCart} />
+			</div>
+			<Footer />
 		</div>
 	)
 }
